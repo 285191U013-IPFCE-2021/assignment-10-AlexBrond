@@ -46,11 +46,15 @@ void print_list (node * p) {
 int sum_squares (node * p) {
 
     // Simple case
-    if (p == NULL) return 0;
+    if (p == NULL) 
+      return 0;
+
+  else if (p->next == NULL)
+    return square(p->value);
 
     // Recursive case
     else return square (p->value) + sum_squares (p->next);
-    
+
 }
 
 // Recursive map function
