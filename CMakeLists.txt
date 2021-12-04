@@ -5,11 +5,11 @@ include(CTest)
 set(CMAKE_CXX_STANDARD 14)
 
 # static checks
-# if(MSVC)
-#   add_compile_options(/W4 /WX)
-# else()
-#   add_compile_options(-Wall -Wextra -pedantic -Werror)
-# endif()
+if(MSVC)
+  add_compile_options(/W4 /WX)
+else()
+  add_compile_options(-Wall -Wextra -pedantic)
+endif()
 
 # set(CMAKE_CXX_CLANG_TIDY
 #   clang-tidy;
